@@ -1,6 +1,6 @@
 # lPDBmngr
----
-lPDBmngr is a python tool I wrote to deal with a local PDB copy files location and computed derivative data. The main motivation was to facilitate how to deal with writing and loading data computed for PDB entry files on different data mining projects. Everything is centred on the _lPDB class_, defined at 'lPDB.py'. 
+
+local PDB manager is a python tool I wrote to deal with a local PDB copy files location and computed derivative data. The main motivation was to facilitate how to deal with writing and loading data computed for PDB entry files on different data mining projects. Everything is centred on the _lPDB class_, defined at 'lPDB.py'. 
 
 
 PS: I wrote this with my own selfish desires on mind, but if you find anything useful feel free to use it. =)
