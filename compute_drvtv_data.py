@@ -1,12 +1,9 @@
 import lPDB
 import pickle as pck
 import subprocess
+from sys import argv
 
-# set input variables #
-source_dir = '/path/to/lPDB_dir/'
-ncpus = 10
-#######################
-'''
+dscrp = '''
         >> compute_drvtv_data.py <<
 
 This script generate a lPDB object load coordinate files location and metadata
@@ -14,8 +11,19 @@ for chain files, compute derivative data[1] and associate to the inputs. This
 metadata of the local pdb copy is stored as a pandas dataframe and writen as
 .csv file as well.
 
+USAGE: python3.6 compute_drvtv_data /path/to/lPDB_dir/ 10
+
 [1] Currently, DSSP and FleXgeo.
+
 '''
+
+print(dscrp)
+
+# set input variables #
+source_dir = argv[1]
+ncpus = int(argv[2])
+#######################
+
 print('@ generating min metadata csv...')
 # 1 - mount minimal metadata
 lPDB_obj = lPDB.lPDB(source_dir)

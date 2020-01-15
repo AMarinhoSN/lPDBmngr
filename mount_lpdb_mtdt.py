@@ -1,5 +1,5 @@
 import lPDB
-
+from sys import argv
 '''
 This script generates a dataframe with local PDB copy metadata.
 Currently:
@@ -9,9 +9,11 @@ Currently:
     4 - xgeo files
     5 - export metadata as a csv file
     6 - save lPDB object state as a pickle file.
+
+USAGE: python3.6 mount_lpdb_mtdt.py /path/to/lPDB_dir/
 '''
 # set lPDB source dir
-src_dir = '/home/users/amarinho/lPDB/'
+src_dir = argv[1]
 
 print('@ get entries info...')
 lPDB_obj = lPDB.lPDB(src_dir)
